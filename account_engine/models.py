@@ -4,6 +4,7 @@ from django.utils import timezone
 from django.contrib.auth.base_user import BaseUserManager
 from django.utils.translation import gettext_lazy as _
 from django.contrib.gis.db import models
+from django.contrib.gis.db import models 
 
 # Create your models here.
 class CustomUserManager(BaseUserManager):
@@ -56,8 +57,10 @@ class Profile(models.Model):
     first_name = models.CharField(max_length=50, blank=True)
     last_name = models.CharField(max_length=50, blank=True)
     phone_number = models.CharField(max_length=10, blank=True)
-    location = models.CharField(max_length=100, blank=True)
     home_address = models.CharField(max_length=100, blank=True)
+    location = models.PointField(blank=True,null=True)
+    created_at = models.DateTimeField(auto_now_add=True,null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
     def __str__(self):
         return f"{self.user} Profile"
