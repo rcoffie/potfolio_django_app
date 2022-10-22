@@ -145,3 +145,13 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 #CustomUser
 AUTH_USER_MODEL = 'account_engine.CustomUser'
+
+#Leaflet configuration 
+LEAFLET_CONFIG = {
+    'DEFAULT_CENTER': (-.023, 36.87),
+    'DEFAULT_ZOOM':3, 
+    'MAX_ZOOM':20,
+    'MIN_ZOOM':2,
+    'SCALE':'both', 
+    
+}
