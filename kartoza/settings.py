@@ -63,7 +63,7 @@ ROOT_URLCONF = "kartoza.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, 'templates')],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -146,12 +146,12 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 #CustomUser
 AUTH_USER_MODEL = 'account_engine.CustomUser'
 
-#Leaflet configuration 
+#Leaflet configuration
 LEAFLET_CONFIG = {
     'DEFAULT_CENTER': (-.023, 36.87),
-    'DEFAULT_ZOOM':3, 
+    'DEFAULT_ZOOM':3,
     'MAX_ZOOM':20,
     'MIN_ZOOM':2,
-    'SCALE':'both', 
-    
+    'SCALE':'both',
+
 }
